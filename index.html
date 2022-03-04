@@ -40,20 +40,29 @@
         </div>
         <!-- textBox -->
         <div class="imgBox">
-          <img src="images/img1.png" alt="just-a-coffee" />
+          <img src="images/img1.png" class="starbucks" />
         </div>
         <!-- imgBox -->
       </div>
       <!-- end content -->
       <ul class="thumb">
         <li>
-          <img src="images/thumb1.png" onClick="imgSlider('img1.png');changeCircleColor('#017143')" />
+          <img
+            src="images/thumb1.png"
+            onClick="imgSlider('img1.png');changeCircleColor('#017143')"
+          />
         </li>
         <li>
-          <img src="images/thumb2.png" onClick="imgSlider('img2.png');changeCircleColor('#eb7495')" />
+          <img
+            src="images/thumb2.png"
+            onClick="imgSlider('img2.png');changeCircleColor('#eb7495')"
+          />
         </li>
         <li>
-          <img src="images/thumb3.png" onClick="imgSlider('img3.png');changeCircleColor('#d752b1')" />
+          <img
+            src="images/thumb3.png"
+            onClick="imgSlider('img3.png');changeCircleColor('#d752b1')"
+          />
         </li>
       </ul>
       <!-- thumb -->
@@ -71,5 +80,15 @@
       <!-- sci -->
     </section>
     <!-- end section -->
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".starbucks").src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+    </script>
   </body>
 </html>
